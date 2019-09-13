@@ -15,12 +15,14 @@ Digital acknowledgement: Chris Tharratt
 
 Username: `ejnorman84`
 
-# __1:__ `ejnorman84`'s real name is Eric J. Norman
+#### __1:__ Name
+`ejnorman84`'s real name is Eric J. Norman
 
-# __2:__ `ejnorman84` works at Watts Amp Energy as a Powerplant Control Specialist. 
+#### __2:__ Place of Work
+`ejnorman84` works at Watts Amp Energy as a Powerplant Control Specialist. 
     URL: [http://wattsamp.net/](http://wattsamp.net/)
 
-# __3:__ `ejnorman84` Personal Information:
+#### __3:__ `ejnorman84` Personal Information:
 
 | __Social Media__  | __Link__ |
 | ------------- | ------------- |
@@ -39,7 +41,7 @@ Emails (From Twitter):
 Addtionally found a pastebin with some potential censored passwords to `ejnorman84`
 https://pastebin.com/4yJRgkFm
     
-# __4:__  IP Addresses:
+#### __4:__  IP Addresses:
     
 157.230.179.99 found with Reverse DNS lookup of http://wattsamp.net
     
@@ -52,7 +54,8 @@ but do show the ips to other servers acting as the DNS:
     | ns-cloud-d1.googledomains.com | 216.239.32.109 |
     
 
-# __5:__ Using dirb, I found the following 'hidden' directories on the website
+#### __5:__ Directories: 
+Using dirb, I found the following 'hidden' directories on the website
 ``` 
     ---- Scanning URL: http://wattsamp.net/ ----
     ==> DIRECTORY: http://wattsamp.net/assets/                                     
@@ -71,7 +74,8 @@ Additionally, HTML comments on the admin page talks about a backend to the login
 page on the server, possibly a red herring. Have not been able to enumerate with 
 that information yet. 
     
-# __6:__ For this we use nmap and get the following output:
+#### __6:__ Port Scanning
+For this we use nmap and get the following output:
 ```
     Starting Nmap 7.80 ( https://nmap.org ) at 2019-09-09 19:11 UTC
     Stats: 0:00:12 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
@@ -115,7 +119,7 @@ that information yet.
     
 From this we see an interesting port 1337 (leet) open, which is likely the port that we need in part 2.
     
-# __7:__ What OS is being used
+#### __7:__ What OS is being used
   
 Using the above results, nmap also gives us a OS guess of OS: Linux. If we run nmap 157.230.179.99 -O to do a more aggressive test we get the following results:
     
@@ -129,7 +133,7 @@ Vyatta router (Linux 2.6.26) (88%), Linux 2.6.18 (88%), Linux 2.6.22 (Kubuntu, x
 This output is not too useful, but does imply that server itself is running some form of Linux. Additional testing on the website shows that it is running an `Apache/2.4.29` with `Ubuntu`. This was found when running Nikto against the site, and is displayed when viewing a 404 page. A Shodan search will also display that information.  
     
   
-# __8:__ Bonus flags:
+#### __8:__ Bonus flags:
 
 | __Flag__  | __How it was found__ |
 | ------------- | ------------- |
