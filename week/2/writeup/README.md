@@ -28,21 +28,21 @@ Username: `ejnorman84`
 | LinkedIn | [LinkedIn](https://www.linkedin.com/in/eric-norman-304550192/)|
 | Twitter | [LinkedIn](https://twitter.com/ericnorman84)|
     
-    Most of the above came from OsintFramework with various username checkers. The Twitter came from searching Eric J Norman on google with some search phrases. 
+Most of the above came from OsintFramework with various username checkers. The Twitter came from searching Eric J Norman on google with some search phrases. 
     
-    Emails (From Twitter):
-        1. ejnorman84@gmail.com
-        2. ejnorman@protonmail.com
+Emails (From Twitter):
+    1. ejnorman84@gmail.com
+    2. ejnorman@protonmail.com
     
-    Addtionally found a pastebin with some potential censored passwords to `ejnorman84`
-    https://pastebin.com/4yJRgkFm
+Addtionally found a pastebin with some potential censored passwords to `ejnorman84`
+https://pastebin.com/4yJRgkFm
     
 4:  IP Addresses:
     
-    157.230.179.99 found with Reverse DNS lookup of http://wattsamp.net
+157.230.179.99 found with Reverse DNS lookup of http://wattsamp.net
     
-    DNSDumpster and DNSTrails don't show many other IP's specific for this site,
-    but do show the ips to other servers acting as the DNS:
+DNSDumpster and DNSTrails don't show many other IP's specific for this site,
+but do show the ips to other servers acting as the DNS:
     
     | ns-cloud-d4.googledomains.com | 216.239.38.109 |
     | ns-cloud-d3.googledomains.com	| 216.239.36.109 |
@@ -123,12 +123,12 @@ This output is not too useful, but does imply that server itself is running some
   
 8: Bonus flags:
 
-    | __Flag__  | __How it was found__ |
-    | ------------- | ------------- |
-    |  *CMSC389R-{html_h@x0r_lulz} | HTML Inspection |
-    |  *CMSC389R-{n0_indexing_pls} | robots.txt |
-    |  *CMSC389R-{Do_you-N0T_See_this} | DNS dumpster info |
-    |  *CMSC389R-{LOOKING_CLOSELY_PAYS} | Instagram Photo |
+| __Flag__  | __How it was found__ |
+| ------------- | ------------- |
+|  *CMSC389R-{html_h@x0r_lulz} | HTML Inspection |
+|  *CMSC389R-{n0_indexing_pls} | robots.txt |
+|  *CMSC389R-{Do_you-N0T_See_this} | DNS dumpster info |
+|  *CMSC389R-{LOOKING_CLOSELY_PAYS} | Instagram Photo |
 
 ### Part 2 (75 pts)
 
