@@ -16,8 +16,10 @@ Digital acknowledgement: Chris Tharratt
 Username: `ejnorman84`
 
 1: `ejnorman84`'s real name is Eric J. Norman
+
 2: `ejnorman84` works at Watts Amp Energy as a Powerplant Control Specialist. 
     URL: [http://wattsamp.net/](http://wattsamp.net/)
+
 3: `ejnorman84` Personal Information:
 | __Social Media__  | __Link__ |
 | :-------------: | :-------------: |
@@ -39,7 +41,8 @@ Username: `ejnorman84`
     
     157.230.179.99 found with Reverse DNS lookup of http://wattsamp.net
     
-    DNSDumpster and DNSTrails don't show many other IP's specific for this site, but do show the ips to other servers acting as the DNS:
+    DNSDumpster and DNSTrails don't show many other IP's specific for this site,
+    but do show the ips to other servers acting as the DNS:
     
     | ns-cloud-d4.googledomains.com | 216.239.38.109 |
     | ns-cloud-d3.googledomains.com	| 216.239.36.109 |
@@ -59,7 +62,9 @@ Username: `ejnorman84`
     ==> DIRECTORY: http://wattsamp.net/views/ 
 ```
     
-    LICENSE gives us the standard MIT License, robots.txt gets us a flag, server-status requrires admin credentials, and the 3 directories gives us site information.
+    LICENSE gives us the standard MIT License, robots.txt gets us a flag, 
+    server-status requrires admin credentials, and the 3 directories gives us site information.
+    
     Additionally, HTML comments on the admin page talks about a backend to the login page on the server, possibly a red herring. Have not been able to enumerate with that information yet. 
     
 6: For this we use nmap and get the following output:
