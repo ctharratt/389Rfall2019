@@ -27,7 +27,16 @@ Username: `ejnorman84`
 | Instagram | [Instagram](https://www.instagram.com/ejnorman84/)|
 | LinkedIn | [LinkedIn](https://www.linkedin.com/in/eric-norman-304550192/)|
 | Twitter | [LinkedIn](https://twitter.com/ericnorman84)|
-    
+
+
+| __Social Media__  | __Link__ |
+| ------------- | ------------- |
+|  Reddit | [Reddit Link](https://www.reddit.com/user/ejnorman84/) |
+|  Instagram | [Instagram Link](https://www.instagram.com/ejnorman84/) |
+|  LinkedIn | [LinkedIn Link](https://www.linkedin.com/in/eric-norman-304550192/) |
+|  Twitter | [Twitter Link](https://twitter.com/ericnorman84) |
+
+
 Most of the above came from OsintFramework with various username checkers. The Twitter came from searching Eric J Norman on google with some search phrases. 
     
 Emails (From Twitter):
@@ -62,10 +71,12 @@ but do show the ips to other servers acting as the DNS:
     ==> DIRECTORY: http://wattsamp.net/views/ 
 ```
     
-    LICENSE gives us the standard MIT License, robots.txt gets us a flag, 
-    server-status requrires admin credentials, and the 3 directories gives us site information.
+LICENSE gives us the standard MIT License, robots.txt gets us a flag, 
+server-status requrires admin credentials, and the 3 directories gives us site information.
     
-    Additionally, HTML comments on the admin page talks about a backend to the login page on the server, possibly a red herring. Have not been able to enumerate with that information yet. 
+Additionally, HTML comments on the admin page talks about a backend to the login
+page on the server, possibly a red herring. Have not been able to enumerate with 
+that information yet. 
     
 6: For this we use nmap and get the following output:
 ```
@@ -109,14 +120,18 @@ but do show the ips to other servers acting as the DNS:
     11211/tcp filtered memcache
 ```
     
-    From this we see an interesting port 1337 (leet) open, which is likely the port that we need in part 2.
+From this we see an interesting port 1337 (leet) open, which is likely the port that we need in part 2.
     
 7: What OS is being used
   
-    Using the above results, nmap also gives us a OS guess of OS: Linux. If we run nmap 157.230.179.99 -O to do a more aggressive test we get the following results:
+Using the above results, nmap also gives us a OS guess of OS: Linux. If we run nmap 157.230.179.99 -O to do a more aggressive test we get the following results:
     
 ```
-    Aggressive OS guesses: Cisco Unified Communications Manager VoIP adapter (88%),     Android 5.0.1 (88%), Android 7.1.2 (Linux 3.10) (88%), Linksys WRV200 wireless broadband router (88%), DD-WRT v23 (Linux 2.4.36) (88%), DD-WRT v24-sp2 (Linux 2.4.36) (88%), Vyatta router (Linux 2.6.26) (88%), Linux 2.6.18 (88%), Linux 2.6.22 (Kubuntu, x86) (88%), Linux 2.6.25 (openSUSE 11.0) (88%)
+Aggressive OS guesses: Cisco Unified Communications Manager VoIP adapter (88%),
+Android 5.0.1 (88%), Android 7.1.2 (Linux 3.10) (88%), Linksys WRV200 wireless broadband 
+router (88%), DD-WRT v23 (Linux 2.4.36) (88%), DD-WRT v24-sp2 (Linux 2.4.36) (88%), 
+Vyatta router (Linux 2.6.26) (88%), Linux 2.6.18 (88%), Linux 2.6.22 (Kubuntu, x86) 
+(88%), Linux 2.6.25 (openSUSE 11.0) (88%)
 ```
 This output is not too useful, but does imply that server itself is running some form of Linux. Additional testing on the website shows that it is running an `Apache/2.4.29` with `Ubuntu`. This was found when running Nikto against the site, and is displayed when viewing a 404 page. A Shodan search will also display that information.  
     
