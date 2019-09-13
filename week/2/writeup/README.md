@@ -19,12 +19,12 @@ Username: `ejnorman84`
 2: `ejnorman84` works at Watts Amp Energy as a Powerplant Control Specialist. 
     URL: [http://wattsamp.net/](http://wattsamp.net/)
 3: `ejnorman84` Personal Information:
-    | __Social Media__  | __Link__ |
-    | ------------- | ------------- |
-    |  Reddit       | [Reddit](https://www.reddit.com/user/ejnorman84/) |
-    |  Instagram    | [Instagram](https://www.instagram.com/ejnorman84/)|
-    |  LinkedIn     | [LinkedIn](https://www.linkedin.com/in/eric-norman-304550192/)|
-    |  Twitter      | [LinkedIn](https://twitter.com/ericnorman84)|
+| __Social Media__  | __Link__ |
+| :-------------: | :-------------: |
+| Reddit | [Reddit](https://www.reddit.com/user/ejnorman84/) |
+| Instagram | [Instagram](https://www.instagram.com/ejnorman84/)|
+| LinkedIn | [LinkedIn](https://www.linkedin.com/in/eric-norman-304550192/)|
+| Twitter | [LinkedIn](https://twitter.com/ericnorman84)|
     
     Most of the above came from OsintFramework with various username checkers. The Twitter came from searching Eric J Norman on google with some search phrases. 
     
