@@ -22,22 +22,37 @@ Write up a pretext that you would use to social engineer this information out of
 Call Eric J. Norman from OSINT number.
 
 Hi Eric, this is Mark from BP Oil and Energy.
+
 We are doing a financial audit on our systems and some of our records are incomplete from when you were previously employed here, do you think you can help me fill in the details?
 I really need to get this done soon or my boss will be on my back.
+
 [Response]
+
 Great! I just need to confirm your identity with the information that we have so we can get this taken care of, what city were you born in?
+
 [City born in]
+
 Perfect, thank you Eric. Our records got scrambled with what paychecks went to each employee's bank, do you know which bank received your paycheck during your employment at BP?
+
 [Bank Details Get]
+
 That's great, I know a few people that use that bank, I've been thinking of switching myself over from [Any bank except the one they say], do you still use that bank currently?
+
 [Polite conversation]
+
 Do you remember how often you were paid? Every two weeks or monthly?
+
 [Doesn't matter what they answer]
+
 Okay perfect! Also, if you are interested since you were a previous employee at BP, if you would be willing to take a quick 2 minute survey on your experience, you will be entered
 to potentially get tickets to season passes to Texas Longhorn Football games. (taken from instagram).
+
 [Hopefully he says yes]
+
 Great! I will send you the link, but we have different link depending on what browser you use, which one are you using right now?
+
 [Browser use get]
+
 *Send generic old employee satisfaction survey.
 Thank you for the help Eric!
 
