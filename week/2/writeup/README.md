@@ -37,6 +37,13 @@ Most of the above came from OsintFramework with various username checkers. The T
 Emails (From Twitter):
     1. ejnorman84@gmail.com
     2. ejnorman@protonmail.com
+
+$whois search
+    Eric Norman
+    1300 Adabel Dr,
+    El Paso, TX, 79835, us
+    (phone) +1-202-656-2837
+
     
 Addtionally found a pastebin with some potential censored passwords to `ejnorman84`
 https://pastebin.com/4yJRgkFm
