@@ -22,6 +22,7 @@ int main_prompt(void) {
     fflush(stdout);
 
     result = fgets(input, BUFF_SIZE, stdin);
+    printf("result: %s", result);
     if (result == 0) return 0;
     return atoi(input);
 }
