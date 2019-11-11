@@ -1,35 +1,71 @@
-Forensics I
-======
+# Writeup 9 - Forensics II
 
 ## Assignment details
 
-This assignment has two parts. It is due 10/18.
-To submit your homework, please follow the guidelines on the front page to edit the README in the /writeup folder and push your completed work to GitHub.
+This assignment has two parts. It is due by 11/11/19 at 11:59PM.
 
+**There will be a late penalty of 5% per day late!**
 
-**There will be a late penalty of 5% off per day late!**
+### Part 1 (45 Pts)
 
-### Part 1 (100 pts)
-Answer the following questions regarding [this](image) file:
+Wattsamp Energy uses 1337bank's as its primary financial management institution.
+The bank's website (http://1337bank.money) has been taken offline by the notorious hackers at ProjectTwelve. One of 1337bank.money's network engineers recently discovered that the hackers have been attempting to steal (and potentially has already stolen) sensitive documents on their server. They have reached out the infamous CMSC389R hackers for help!
 
-1. What kind of file is it?
+The principle network engineer at 1337bank has saved all network traffic from the intrusion. Can you analyze it for us and answer the following questions?
 
-2. Where was this photo taken? Provide a city, state and the name of the building in your answer.
+[netlog.pcap](netlog.pcap)
 
-3. When was this photo taken? Provide a timestamp in your answer.
+1. Warmup: what IP address has been attacked?
 
-4. What kind of camera took this photo?
+2. What kind of assessment tool(s) were the attackers using against the victim machine? List the name(s) of the tool(s) as well.
 
-5. How high up was this photo taken? Provide an answer in meters.
+3. What are the hackers' IP addresses, and where are they connecting from?
 
-6. Provide any found flags in this file in standard flag format. You must find at least 1 flag to answer this question for full credit. All other flags found will be considered bonus.
+4. What port are they using to steal files on the server?
 
+5. Which file did they steal? What kind of file is it? Do you recognize the file?
+
+6. Which file did the attackers leave behind on the server?
+
+7. What is a countermeasure to prevent this kind of intrusion from happening again? Note: disabling the vulnerable service is *not* an option.
+
+### Part 2 (55 Pts)
+
+After looking at a file that you discovered in #6 above, we were unable to identify its file type or any program that can open it. Fortunately, our friends at UMDCSEC were able to dig up a file specification sheet for this file type! Can you write a parser for us and tell us what the file contains?
+
+Here is file's spec sheet [here](fpff-spec.md). Once you write the parser, report back with what you've found!
+
+Perform the following tasks:
+
+1. Develop the parser, using both the
+[specification](fpff-spec.md) and
+`greetz.fpff` for reference. [stub.py](stub.py) contains the beginnings of a Python parser, if
+you'd like to develop in Python.
+
+2. Parse `greetz.fpff`, and report the following information:
+    1. When was `greetz.fpff` generated?
+    2. Who authored `greetz.fpff`?
+    4. List each section, giving us the data in it *and* its type.
+    5. Report *at least* one flag hidden in `greetz.fpff`. Any other flag found will count as bonus points towards the *competition* portion of the syllabus.
+
+#### Important notes
+
+Make sure to submit **all** of the code you write, even if based on `stub.py`!
 
 ### Scoring
 
-Part 1 is worth 100 points.
+This assignment is worth 100 points, broken down between the pcap findings (25 points), and fpff parser (50 points) and question answering/analysis (25 points).
 
 ### Tips
-Revisit the slides on Forensics 1.
 
-Good luck!
+Remember to document your steps for maximum credit. We want to know how you approached and solved this challenge!
+
+Look at the Forensics I and II slides for guidance.
+
+If you're using Python, Ruby, or another scripting language, check out the `pack` and `unpack`
+methods:
+
+* Python 2 - [`struct`](https://docs.python.org/2/library/struct.html)
+* Python 3 - [`struct`](https://docs.python.org/3.5/library/struct.html)
+* Ruby - [`Array#pack`](https://ruby-doc.org/core-2.5.0/Array.html#method-i-pack) and
+[`String#unpack`](https://ruby-doc.org/core-2.5.0/String.html#method-i-unpack)
