@@ -12,13 +12,13 @@ Digital acknowledgement: Chris Tharratt
 
 ### Part 1 (45 Pts)
 
-1) The ledger contains 16 bytes for the key hash, 16 bytes for the ciphertext hash, 16 bytes for the initiation vector, and then the lenght of the ciphertext for a total of 48 bytes + the size of the ciphertext.
+1) The ledger contains 16 bytes for the key hash, 16 bytes for the ciphertext hash, 16 bytes for the initiation vector, and then the length of the ciphertext for a total of 48 bytes + the size of the ciphertext.
 
-2) The program uses md5 to hash the key, and MD5 for the key hash. The ciphertext is encrypted using AES128, then hashed with md5. MD5 hashes are pretty weak and are susceptible to collision attacks. They don't produce that long of a cryptographic hash, and is really quick to run the algorithm, so MD5 hashes can be brute forced or rainbowed quickly. AES128 isn't terrible, but there are better encryption algorithms out there.
+2) The program uses MD5 to hash the key, and MD5 for the key hash. The ciphertext is encrypted using AES128, then hashed with MD5. MD5 hashes are pretty weak and are susceptible to collision attacks. They don't produce that long of a cryptographic hash, and is really quick to run the algorithm, so MD5 hashes can be brute forced or rainbowed quickly. AES128 isn't terrible, but there are better encryption algorithms out there.
 
 3) The ledger has a size of 48 bytes + the cipher text. The given ledger has a total of 656 bytes so we know that the ciphertext is 608 bytes. Additionally, since you know the byte offsets, you can derive the key and cipher hashes, and the initiation vector.
 
-4) The program uses AES128 to encrypt the data prior to writing it to the ledger. The encryption key is derived from using md5 to hash a password, taking the first two bytes, then hashing those two bytes again, with md5.
+4) The program uses AES128 to encrypt the data prior to writing it to the ledger. The encryption key is derived from using MD5 to hash a password, taking the first two bytes, then hashing those two bytes again, with MD5.
 
 5) The ledger ensures integrity by checking the ciphertext hash with the stored hash and does the same with the key hash. However, since these are stored in the ledger, a person can modify the hashes with the new ciphertext and the program would not be able to detect the unauthorized change.
 
@@ -29,7 +29,7 @@ Digital acknowledgement: Chris Tharratt
 
 ### Part 2 (45 Pts)
 
-1) Code in crack.c. Basically loops through every potential 4 letter password and hashes it with md5 in attempt to find a hash that has the correct first 2 bytes. Do this by calling MD5 on the first 2 bytes like the ledger.c file does, and check that against the first 16 bytes of the ledger file. Return the password. Password: `ajTF`.
+1) Code in crack.c. Basically loops through every potential 4 letter password and hashes it with MD5 in attempt to find a hash that has the correct first 2 bytes. I first tried just doing every 2 letter password, but didn't find anything so I added 2 more digits. To get the hash, call MD5 on the first 2 bytes of resulting hash from the password like the ledger.c file does, and check that against the first 16 bytes of the ledger file (the hash). Return the password if the two hashes are the same. Password: `ajTF`.
 
 2) `CMSC389R-{k3y5p4c3_2_sm411}`
 
