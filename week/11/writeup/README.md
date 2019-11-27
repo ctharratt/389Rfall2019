@@ -21,8 +21,10 @@ Such a Quick Little, website!
 
 `CMSC389R-{y0u_ar3_th3_SQ1_ninj@}`
 
-Found be exploiting a SQL injection in the URL of the website. Saw that they were using
-id=0, 1, 2.. in there URL, which indicates a SQL databse. Using the injection from the slides and changing the OR to be || since OR is detected, we can then find the flag. 
+Found by exploiting a SQL injection in the URL of the website. Saw that they were using
+id=0, 1, 2.. in their URL, which indicates a SQL databse. Using the injection from the 
+slides and changing the OR to be || since OR is detected to be a SQL inejection, we 
+can then find the flag. 
 `http://142.93.136.81:5000/item?id=0'||'1'='1'-- -`
 
 ### Part 2 (60 Pts)
